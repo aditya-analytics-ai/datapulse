@@ -1,0 +1,61 @@
+.jobs-page { padding: 28px 32px; display:flex; flex-direction:column; gap:16px; }
+.jobs-header { display:flex; align-items:flex-end; justify-content:space-between; }
+
+.query-bar {
+  display: flex; align-items: center; gap: 10px;
+  flex-wrap: wrap; padding: 14px 20px;
+}
+.query-fn { color: #00d4aa; font-size: 13px; }
+.query-sep { color: #4a5568; font-size: 13px; }
+.query-field { display:flex; align-items:center; gap:6px; }
+.query-param { font-size:12px; font-weight:600; color:#4a5568; font-family:'JetBrains Mono',monospace; }
+.query-select {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 5px 10px;
+  color: #e2e8f0;
+  font-size: 12px; font-family:'JetBrains Mono',monospace;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.query-select:focus { outline:none; border-color:rgba(0,212,170,0.4); }
+.query-run { margin-left:8px; padding:7px 16px; font-size:12px; font-family:'JetBrains Mono',monospace; }
+
+.jobs-idle { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:60px 20px; gap:16px; }
+.idle-hint { display:flex; flex-direction:column; align-items:center; gap:12px; }
+
+.metrics-row { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+@media(max-width:900px) { .metrics-row { grid-template-columns:repeat(2,1fr); } }
+
+.charts-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media(max-width:1000px) { .charts-grid { grid-template-columns:1fr; } }
+.chart-card { padding:18px 20px; }
+.chart-title { font-size:12px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:#4a5568; margin-bottom:14px; }
+
+/* Bar list */
+.bar-list { display:flex; flex-direction:column; gap:10px; }
+.bar-list-row { display:flex; align-items:center; gap:10px; }
+.bar-list-label { font-size:11px; color:#4a5568; width:100px; flex-shrink:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.bar-list-track { flex:1; height:6px; background:rgba(255,255,255,0.04); border-radius:99px; overflow:hidden; }
+.bar-list-fill { height:100%; border-radius:99px; animation:progressBar 0.8s ease-out both; }
+.bar-list-fill.teal { background:linear-gradient(90deg,#00d4aa,#60efff); }
+.bar-list-count { font-size:11px; color:#2d3748; font-family:'JetBrains Mono',monospace; width:24px; text-align:right; flex-shrink:0; }
+
+/* Stacked bar */
+.stacked-bar-wrap { display:flex; flex-direction:column; gap:14px; }
+.stacked-bar { display:flex; height:24px; border-radius:6px; overflow:hidden; gap:2px; }
+.stacked-seg { border-radius:3px; animation:progressBar 0.8s ease-out both; }
+.stacked-legend { display:flex; gap:16px; flex-wrap:wrap; }
+.legend-item { display:flex; align-items:center; gap:6px; }
+.legend-dot { width:8px; height:8px; border-radius:2px; flex-shrink:0; }
+.legend-label { font-size:11px; color:#4a5568; }
+.legend-val { font-size:11px; font-family:'JetBrains Mono',monospace; color:#94a3b8; }
+
+/* Jobs table */
+.company-avatar { width:22px; height:22px; border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:#fff; flex-shrink:0; }
+.skill-tags { display:flex; gap:4px; flex-wrap:wrap; }
+.skill-tag { font-size:10px; font-weight:600; letter-spacing:0.04em; padding:2px 6px; background:rgba(0,212,170,0.08); color:#00d4aa; border:1px solid rgba(0,212,170,0.15); border-radius:99px; white-space:nowrap; }
+.skill-more { font-size:10px; color:#2d3748; padding:2px 4px; }
+
+.section-title { font-size:14px; font-weight:600; color:#e2e8f0; }

@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+sqlalchemy
+pymysql
+python-dotenv
+requests
+beautifulsoup4
+playwright
+pandas
+openpyxl
+pdfplumber
+nltk
+spacy
+lxml
+python-jose[cryptography]
+passlib[bcrypt]
+httpx

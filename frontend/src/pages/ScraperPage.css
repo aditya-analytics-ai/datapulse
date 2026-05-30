@@ -1,0 +1,76 @@
+.scraper-page { padding: 28px 32px; }
+.scraper-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
+.scraper-input-card { display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; }
+
+.scraper-controls { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.toggles-row { display: flex; gap: 20px; flex-wrap: wrap; }
+
+.scrape-btn { padding: 9px 20px; font-size: 13px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em; min-width: 120px; justify-content: center; }
+.scrape-btn.loading { opacity: 0.8; cursor: not-allowed; }
+
+.progress-track {
+  height: 2px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00d4aa, #60efff);
+  border-radius: 99px;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px rgba(0,212,170,0.5);
+}
+
+.scrape-error {
+  font-size: 12px; color: #ef4444;
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.2);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.scraper-results { display: flex; flex-direction: column; gap: 16px; }
+
+.metrics-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+@media (max-width: 900px) { .metrics-row { grid-template-columns: repeat(2, 1fr); } }
+
+.preview-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 14px; flex-wrap: wrap; gap: 10px;
+}
+.section-title { font-size: 14px; font-weight: 600; color: #e2e8f0; }
+.export-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+.export-btn { padding: 6px 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; font-family: 'JetBrains Mono', monospace; }
+
+.table-wrap { overflow-x: auto; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); }
+.row-num { color: #2d3748; font-size: 12px; user-select: none; }
+
+/* Idle terminal */
+.idle-state { display: flex; justify-content: center; padding: 24px 0; }
+.idle-terminal {
+  width: 100%; max-width: 600px;
+  background: #0a0e17;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.terminal-bar {
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex; align-items: center; gap: 6px;
+}
+.terminal-bar span { width: 10px; height: 10px; border-radius: 50%; }
+.terminal-bar span:nth-child(1) { background: #ef4444; }
+.terminal-bar span:nth-child(2) { background: #f97316; }
+.terminal-bar span:nth-child(3) { background: #22c55e; }
+.terminal-title { font-size: 11px; color: #2d3748; font-family: 'JetBrains Mono', monospace; margin-left: auto; }
+.terminal-body { padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; }
+.terminal-body p { font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+.t-prompt { color: #00d4aa; }
+.t-cmd    { color: #e2e8f0; }
+.t-arg    { color: #8b5cf6; }
+.t-comment { color: #2d3748; }
+.cursor-term { color: #00d4aa; animation: blink 1s step-end infinite; }

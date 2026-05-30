@@ -1,0 +1,42 @@
+.history-page { padding: 28px 32px; }
+.history-header { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:20px; flex-wrap:wrap; gap:12px; }
+.job-count { font-size:12px; font-family:'JetBrains Mono',monospace; color:#2d3748; padding:4px 10px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); border-radius:6px; }
+
+.search-wrap { position:relative; }
+.search-icon { position:absolute; left:10px; top:50%; transform:translateY(-50%); color:#2d3748; pointer-events:none; }
+.search-input {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  padding: 7px 12px 7px 30px;
+  color: #e2e8f0;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  width: 200px;
+  transition: border-color 0.2s, width 0.3s;
+}
+.search-input:focus { outline:none; border-color:rgba(0,212,170,0.3); width:260px; }
+.search-input::placeholder { color:#2d3748; }
+
+.history-card { margin-bottom: 0; }
+
+.history-row { cursor:pointer; transition:background 0.15s; }
+.history-row.expanded td { background:rgba(0,212,170,0.04); }
+
+.url-cell { display:flex; align-items:center; gap:8px; max-width:360px; }
+.url-text { font-size:12px; color:#94a3b8; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:340px; display:block; }
+
+.action-btns { display:flex; align-items:center; justify-content:center; gap:2px; }
+
+.detail-row td { padding:0; background:rgba(0,0,0,0.2); }
+.detail-panel { border-top:1px solid rgba(0,212,170,0.15); }
+.detail-inner { padding:20px 24px; display:flex; flex-direction:column; gap:16px; }
+.detail-meta { display:flex; gap:24px; flex-wrap:wrap; align-items:center; }
+.meta-item { display:flex; align-items:center; gap:8px; }
+.meta-label { font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#2d3748; }
+.meta-value { font-size:12px; color:#94a3b8; }
+.detail-table-wrap { overflow-x:auto; border:1px solid rgba(255,255,255,0.06); border-radius:8px; }
+
+/* Reuse terminal from scraper */
+.idle-terminal { background:#0a0e17; border:1px solid rgba(255,255,255,0.06); border-radius:12px; overflow:hidden; }
+.terminal-bar { padding:8px 14px; background:rgba(255,255,255,0.03); border-bottom:1px solid rgba(255,255,255,0.05); display:flex; align-items:center; gap:6px; }
